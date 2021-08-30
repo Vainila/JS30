@@ -11,8 +11,8 @@
   <script>
     const dogs = [{ name: 'Snickers', age: 2 }, { name: 'hugo', age: 8 }];
 
+    const p = document.querySelector('p');
     function makeGreen() {
-      const p = document.querySelector('p');
       p.style.color = '#BADA55';
       p.style.fontSize = '50px';
     }
@@ -21,24 +21,61 @@
 
     // Interpolated
 
+    console.log("this string says: %s, right?", '😎');
+
     // Styled
+
+    console.log("%c some cool text", "font-size: 50px; color: coral")
 
     // warning!
 
+   console.warn("some custom warning");    
+
     // Error :|
 
-    // Info
+    console.error("404");
 
+    // Info
+    console.info("some cool info")
     // Testing
+
+    console.assert(1==1, 'that is true')
+    console.assert(1!=1, "It's a mistake by Men at work")
 
     // clearing
 
+    console.clear();
+   //  clears console
+
+
     // Viewing DOM Elements
+
+    console.dir(p)
+
+
+    console.clear();
 
     // Grouping together
 
+    dogs.forEach(dog=>{
+       console.group(`${dog.name}`); //or .groupCollapsed
+       console.log(`This is ${dog.name}`);
+       console.log(`This is ${dog.age}`);
+       console.groupEnd(`${dog.name}`);
+    })
+
+
     // counting
 
+    console.count('ABC')
+    console.count('ABC')
+    console.count('ABC')
+    console.count('XYZ')
+    console.count('XYZ')
+    console.count('XYZ')
+    console.count('XYZ')
+    console.count('ABC')
+    console.count('ABC')
     // timing
 
   </script>
